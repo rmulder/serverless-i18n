@@ -11,7 +11,7 @@ interface LangProps {
   locale?: Locale;
 }
 
-export default (WrappedPage: NextPage<any>) => {
+const WithLocale = (WrappedPage: NextPage<any>) => {
   const WithLocale: NextPage<any, LangProps> = ({
     locale = "de",
     ...pageProps
@@ -60,3 +60,5 @@ export default (WrappedPage: NextPage<any>) => {
 
   return WithLocale;
 };
+
+export default WithLocale;
